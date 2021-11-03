@@ -1,0 +1,46 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "Back to basic",
+  "main": "public/index.html",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint --fix --ext .html,.css,.js",
+    "format": "prettier --write \"**/*.{js,css,html}\""
+  },
+  "repository": "git+https://github.com/abdmmar/playground.git",
+  "keywords": [
+    "gui",
+    "experiment",
+    "playground",
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "Abdullah Ammar <abd.ammar.mar@gmail.com> (https://abdmmar.tech/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abdmmar/playground/issues"
+  },
+  "homepage": "https://github.com/abdmmar/playground#readme",
+  "devDependencies": {
+    "eslint": "8.1.0",
+    "eslint-config-prettier": "8.3.0",
+    "husky": "4.3.8",
+    "lint-staged": "11.2.6",
+    "prettier": "2.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(html|css|js)": [
+      "eslint --fix"
+    ],
+    "*.+(html|css|js|json)": [
+      "prettier --write"
+    ]
+  }
+}
