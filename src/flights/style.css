@@ -1,6 +1,5 @@
 .flight {
   max-width: 350px;
-  width: 100%;
   padding: 16px;
   border: 1px solid #dadce0;
   border-radius: 6px;
@@ -81,6 +80,28 @@
   border: 1px solid #9aa0a6;
 }
 
+.flight input:focus,
+.flight button:focus {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: black;
+  outline-offset: -1px;
+}
+
+.origin:focus-within ~ .circle-origin {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: black;
+  outline-offset: -1px;
+}
+
+.destination:focus-within ~ .circle-destination {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: black;
+  outline-offset: -1px;
+}
+
 .travel-circle {
   display: flex;
   align-items: center;
@@ -93,14 +114,6 @@
   position: absolute;
   z-index: 1;
   fill: #9aa0a6;
-}
-
-.origin:focus-within ~ .circle-origin {
-  border: 2px solid black;
-}
-
-.destination:focus-within ~ .circle-destination {
-  border: 2px solid black;
 }
 
 .circle-origin {
@@ -159,11 +172,19 @@
   border-bottom-left-radius: 0;
 }
 
+#return-date input:hover {
+  border-left-color: #9aa0a6;
+}
+
 .date input {
   border: 1px solid #dadce0;
   border-radius: 3px;
   padding: 16px;
   width: 100%;
+}
+
+.date input:hover {
+  border: 1px solid #9aa0a6;
 }
 
 .date input[aria-invalid='true'] {
