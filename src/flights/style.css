@@ -176,6 +176,11 @@
   border-left-color: #9aa0a6;
 }
 
+#return-date input:focus {
+  position: relative;
+  z-index: 99;
+}
+
 .date input {
   border: 1px solid #dadce0;
   border-radius: 3px;
