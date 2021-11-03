@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Inter';
-  src: url('./font/Inter-VariableFont_slnt_wght.woff2');
+  src: url('src/font/Inter-VariableFont_slnt_wght.woff2');
 }
 
 :root {

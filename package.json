@@ -2,7 +2,7 @@
   "name": "playground",
   "version": "1.0.0",
   "description": "Back to basic",
-  "main": "public/index.html",
+  "main": "index.html",
   "type": "module",
   "scripts": {
     "lint": "eslint --fix --ext .html,.css,.js",
