@@ -1,0 +1,195 @@
+.flight {
+  max-width: 350px;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  box-shadow: 0px 1px 3px 0px rgb(60 64 67 / 30%), 0px 4px 8px 3px rgb(60 64 67 / 15%);
+}
+/* TITLE */
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.title svg {
+  fill: hsla(225, 15%, 17%, 1);
+}
+
+.title h2 {
+  margin: 0;
+}
+
+/* TITLE END ------------ */
+
+/* TRAVEL */
+
+.travel {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+.origin-container,
+.destination-container {
+  width: fit-content;
+  overflow: hidden;
+  position: relative;
+}
+
+.origin,
+.destination {
+  border: 1px solid #dadce0;
+  border-radius: 3px;
+}
+
+.travel input[list] {
+  border: none;
+  border-radius: 3px;
+  padding: 16px;
+  width: 100%;
+}
+
+.origin input[list] {
+  padding-left: 36px;
+  padding-right: 20px;
+}
+
+.destination input[list] {
+  padding-left: 44px;
+}
+
+.destination .input-icon svg {
+  left: 18px;
+}
+
+.origin:hover,
+.destination:hover {
+  border: 1px solid #9aa0a6;
+}
+
+.origin:hover ~ .circle-origin {
+  border: 1px solid #9aa0a6;
+}
+
+.destination:hover ~ .circle-destination {
+  border: 1px solid #9aa0a6;
+}
+
+.travel-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 5.5px;
+}
+
+.travel-circle svg {
+  position: absolute;
+  z-index: 1;
+  fill: #9aa0a6;
+}
+
+.origin:focus-within ~ .circle-origin {
+  border: 2px solid black;
+}
+
+.destination:focus-within ~ .circle-destination {
+  border: 2px solid black;
+}
+
+.circle-origin {
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #dadce0;
+  position: absolute;
+  right: -24px;
+  top: 6px;
+  width: 36px;
+  height: 36px;
+}
+
+.circle-destination {
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #dadce0;
+  position: absolute;
+  left: -24px;
+  top: 6px;
+  width: 36px;
+  height: 36px;
+}
+
+/* TRAVEL END ------------------------------------- */
+
+/* DATE */
+
+.date {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#departure-date,
+#return-date {
+  width: fit-content;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#departure-date .input-icon input {
+  padding-left: 36px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#return-date input {
+  border-left-color: white;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.date input {
+  border: 1px solid #dadce0;
+  border-radius: 3px;
+  padding: 16px;
+  width: 100%;
+}
+
+.date input[aria-invalid='true'] {
+  color: salmon;
+}
+
+/* DATE END ------------------------------------- */
+
+/* SEARCH BUTTON */
+
+.search-flight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 16px;
+  color: white;
+  width: 100%;
+  background-color: hsla(225, 15%, 17%, 1);
+}
+
+.search-flight svg {
+  fill: white;
+}
+
+/* SEARCH BUTTON END ------------------------------------- */
