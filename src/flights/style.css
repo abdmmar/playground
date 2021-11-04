@@ -72,41 +72,6 @@
   left: 18px;
 }
 
-.origin:hover,
-.destination:hover {
-  border: 1px solid #9aa0a6;
-}
-
-.origin:hover ~ .circle-origin {
-  border: 1px solid #9aa0a6;
-}
-
-.destination:hover ~ .circle-destination {
-  border: 1px solid #9aa0a6;
-}
-
-.flight input:focus,
-.flight button:focus {
-  outline-width: 2px;
-  outline-style: solid;
-  outline-color: black;
-  outline-offset: -1px;
-}
-
-.origin:focus-within ~ .circle-origin {
-  outline-width: 2px;
-  outline-style: solid;
-  outline-color: black;
-  outline-offset: -1px;
-}
-
-.destination:focus-within ~ .circle-destination {
-  outline-width: 2px;
-  outline-style: solid;
-  outline-color: black;
-  outline-offset: -1px;
-}
-
 .travel-circle {
   display: flex;
   align-items: center;
@@ -177,15 +142,6 @@
   border-bottom-left-radius: 0;
 }
 
-#return-date input:hover {
-  border-left-color: #9aa0a6;
-}
-
-#return-date input:focus {
-  position: relative;
-  z-index: 99;
-}
-
 .date input {
   border: 1px solid #dadce0;
   border-radius: 3px;
@@ -224,3 +180,54 @@
 }
 
 /* SEARCH BUTTON END ------------------------------------- */
+
+/* INTERACTION (:FOCUS, :HOVER, ETC) */
+
+@media (prefers-reduced-motion: no-preference) {
+  .origin:hover,
+  .destination:hover {
+    border: 1px solid #9aa0a6;
+  }
+
+  .origin:hover ~ .circle-origin {
+    border: 1px solid #9aa0a6;
+  }
+
+  .destination:hover ~ .circle-destination {
+    border: 1px solid #9aa0a6;
+  }
+
+  .flight input:focus,
+  .flight button:focus {
+    transition: none;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: black;
+    outline-offset: -1px;
+  }
+
+  .origin:focus-within ~ .circle-origin {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: black;
+    outline-offset: -1px;
+  }
+
+  .destination:focus-within ~ .circle-destination {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: black;
+    outline-offset: -1px;
+  }
+
+  #return-date input:hover {
+    border-left-color: #9aa0a6;
+  }
+
+  #return-date input:focus {
+    position: relative;
+    z-index: 99;
+  }
+}
+
+/* INTERACTION END ---------------------- */
