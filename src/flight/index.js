@@ -72,9 +72,16 @@ function main() {
 
 class Flight extends HTMLElement {
   async connectedCallback() {
+    if (!this.rendered) {
+      await this.render()
+      this.rendered = true
+      main()
+    }
+  }
+
+  async render() {
     const html = await loadHTML('./src/flight/index.html')
     this.innerHTML = html.body.innerHTML
-    main()
   }
 }
 
