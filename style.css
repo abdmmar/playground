@@ -6,6 +6,8 @@
 :root {
   --typeface: 'Inter', 'Roboto', sans-serif;
   --text-color-primary: hsla(225, 15%, 17%, 1);
+  --bg-color-primary: hsla(225, 15%, 17%, 1);
+  --border-color: hsl(220deg 9% 87%);
 }
 
 html {
@@ -13,6 +15,7 @@ html {
   padding: 0;
   margin: 0;
   font-family: var(--typeface);
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -38,6 +41,7 @@ body {
 .navbar {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   gap: 16px;
 }
@@ -49,6 +53,9 @@ body {
 
 main {
   margin-block: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 section[id] {
@@ -56,6 +63,7 @@ section[id] {
   border: 1px dashed #dadce0;
   border-radius: 12px;
   width: fit-content;
+  background-color: #f9fafb;
 }
 
 .sr-only {
