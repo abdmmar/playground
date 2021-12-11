@@ -1,22 +1,30 @@
+@media screen and (max-width: 430px) {
+  search-autocomplete {
+    width: 100%;
+  }
+
+  #search-autocomplete {
+    width: 100%;
+    min-width: 0 !important;
+  }
+}
+
+#search-autocomplete {
+  min-width: 350px;
+}
+
 .search-autocomplete {
   position: relative;
-  width: fit-content;
+  width: 100%;
 }
 
 .autocomplete {
   display: flex;
   flex-direction: row;
   width: 100%;
-  min-width: 350px;
   border-radius: 5px;
   border: 1px solid var(--border-color);
   transition: border 0.15s, box-shadow 0.15s;
-}
-
-@media screen and (max-width: 420px) {
-  .autocomplete {
-    min-width: 0;
-  }
 }
 
 .autocomplete:hover {
