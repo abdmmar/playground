@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Playground</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- FLIGHT -->
     <link rel="stylesheet" href="src/flight/style.css" />
     <script type="module" src="src/flight/index.js"></script>
+
+    <!-- AUTOCOMPLETE -->
+    <link rel="stylesheet" href="src/autocomplete/style.css" />
+    <script type="module" src="src/autocomplete/index.js"></script>
   </head>
   <body>
     <div class="root">
@@ -17,7 +22,27 @@
       </header>
       <main>
         <flight-card></flight-card>
+        <search-autocomplete></search-autocomplete>
       </main>
+
+      <svg id="icon" style="display: none">
+        <symbol id="search-icon">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          />
+        </symbol>
+        <symbol id="clear-icon">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </symbol>
+      </svg>
     </div>
   </body>
 </html>
