@@ -34,6 +34,15 @@
     <!-- AUTOCOMPLETE -->
     <link rel="stylesheet" href="src/autocomplete/style.css" />
     <script type="module" src="src/autocomplete/index.js"></script>
+
+    <!-- HOT-TOAST -->
+    <link rel="stylesheet" href="src/hot-toast/style.css" />
+    <script type="module" src="src/hot-toast/hot-toast.js"></script>
+    <script type="module" src="src/hot-toast/hot-toast-item.js"></script>
+    <script type="module" src="src/hot-toast/toast.js"></script>
+
+    <!-- HOT TOAST TEST -->
+    <script type="module" src="src/hot-toast-test/index.js"></script>
   </head>
   <body>
     <div class="root">
@@ -43,7 +52,11 @@
       </header>
       <main>
         <flight-card></flight-card>
-        <search-autocomplete></search-autocomplete>
+        <div class="component-stack">
+          <search-autocomplete></search-autocomplete>
+          <hot-toast-test></hot-toast-test>
+        </div>
+        <hot-toast></hot-toast>
       </main>
 
       <svg id="icon" style="display: none">
@@ -66,4 +79,5 @@
       </svg>
     </div>
   </body>
+  <script type="module" src="src/hot-toast/index.js"></script>
 </html>
