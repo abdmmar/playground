@@ -31492,7 +31492,7 @@ const words = [
   { uri: '/yosong', keyword: 'Yosong' },
   { uri: '/yoyo', keyword: 'Yoyo' },
   { uri: '/yu', keyword: 'Yu' },
-  { uri: '/yubileum', keyword: 'Yubileum' },
-]
+  { uri: '/yubileum', keyword: 'Yubileum' }
+];
 
-export default words
+export default words;
