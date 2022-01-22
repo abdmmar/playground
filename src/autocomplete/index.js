@@ -119,7 +119,7 @@ function main() {
     main.innerHTML = '<div class="card"><strong>Loading...</strong></div>';
 
     try {
-      const response = await fetch(`'https://kateglo.com/api.php?format=json&phrase='${input}`);
+      const response = await fetch(`https://kateglo.com/api.php?format=json&phrase=${input}`);
       const result = await response.json();
       const { phrase, definition } = result.kateglo;
 
