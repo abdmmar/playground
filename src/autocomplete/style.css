@@ -11,6 +11,7 @@
 
 #search-autocomplete {
   min-width: 350px;
+  width: 100%;
 }
 
 .search-autocomplete {
@@ -138,4 +139,28 @@
 
 .result-item:last-child {
   margin-bottom: 0;
+}
+
+#word-definition .card {
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  transition: border 0.15s, box-shadow 0.15s;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#word-definition .card:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
+}
+
+#word-definition .card-title {
+  margin: 0;
+}
+
+#word-definition .card p {
+  margin: 0;
+  padding: 0;
 }
