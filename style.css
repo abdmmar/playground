@@ -72,8 +72,8 @@ body {
 
 main {
   margin-block: 50px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 20px;
 }
 
@@ -83,6 +83,16 @@ section[id] {
   border-radius: 12px;
   width: fit-content;
   background-color: #f9fafb;
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  section[id] {
+    width: 100%;
+  }
 }
 
 .sr-only {
@@ -130,7 +140,7 @@ button {
 
 p {
   margin-bottom: 1rem;
-  line-height: calc(1.125rem * 1.6);
+  line-height: 1.5;
 }
 
 h1,
