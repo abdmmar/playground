@@ -68,5 +68,3 @@ class Trie {
     return this.collectAllWords(currentNode);
   }
 }
-
-export default Trie;
