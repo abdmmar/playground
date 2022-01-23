@@ -39,7 +39,7 @@
     "*.+(js)": [
       "eslint --fix"
     ],
-    "*.+(html|css|js|json)": [
+    "*.+(html|css|js)": [
       "prettier --write"
     ]
   }
