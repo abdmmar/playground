@@ -85,7 +85,7 @@ section[id] {
   background-color: #f9fafb;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
   main {
     grid-template-columns: 1fr;
   }
