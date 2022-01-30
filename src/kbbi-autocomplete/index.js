@@ -10,6 +10,12 @@ class KBBIAutocomplete extends HTMLElement {
     const inputSearch = document.getElementById('search-input');
     const autocompleteForm = document.querySelector('.autocomplete');
     const worker = new Worker('src/kbbi-autocomplete/worker.js');
+    const cardDesc = document.querySelector('.card-desc');
+
+    worker.onmessage = (e) => {
+      cardDesc.textContent = e.data;
+      if (e.data === '') cardDesc.remove();
+    };
 
     // Main feature
     inputSearch.addEventListener('input', (e) => {
@@ -123,11 +129,10 @@ class KBBIAutocomplete extends HTMLElement {
       main.innerHTML = '<div class="card"><strong>Loading...</strong></div>';
 
       try {
-        const response = await fetch(`https://kateglo.com/api.php?format=json&phrase=${input}`);
+        const response = await fetch(`https://katla.vercel.app/api/define/${input}`);
         const result = await response.json();
-        const { phrase, definition } = result.kateglo;
 
-        const card = this.createCard(phrase, definition[0].def_text);
+        const card = this.createCard(input, result[0]);
 
         main.innerHTML = '';
         main.append(card);
